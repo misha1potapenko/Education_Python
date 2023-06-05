@@ -10,3 +10,23 @@
 # Добавьте в список повторяющиеся элементы и сравните на результаты.
 
 
+data = [4, 6.0, 'String', False, False, 6.0]
+number = 1
+integer = ''
+for element in data:
+    if isinstance(element, int):
+        integer = 'integer'
+    if isinstance(element, str):
+        integer = 'String'
+
+    print('number:', number, 'var:', element, ' Type is:', type(element), ' id:', id(element),
+          'hash:', hash(element), ' ', integer,)
+    number += 1
+    integer = ''
+
+
+# ✔ Напишите программу, которая получает целое число и возвращает
+# его двоичное, восьмеричное строковое представление.
+# ✔ Функции bin и oct используйте для проверки своего
+# результата, а не для решения.
+
