@@ -18,7 +18,7 @@ size_b = float(input('Введите сторону B: '))
 size_c = float(input('Введите сторону C: '))
 
 if size_a + size_b > size_c and size_c + size_b > size_a and size_a + size_c > size_b:
-    print('Треугольник существует \n')
+    print('Треугольник существует')
     if size_a == size_b or size_a == size_c or size_c == size_b:
         print('Треугольник равнобедренный')
     if size_a == size_b == size_c:
