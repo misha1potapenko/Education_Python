@@ -3,4 +3,8 @@
 # б. Написать порграмму, которая выодит в консоль таблицу умножения "как на тетрадках"
 
 hight = int(input('Введите высоту елочки'))
+str_for_hrismas = '*'
+for i in range(hight):
 
+    print(str_for_hrismas)
+    str_for_hrismas += '*'
