@@ -2,9 +2,21 @@
 # a. Написать программу, которая будет выводить в консоль ёлочку заданной высоты
 # б. Написать порграмму, которая выодит в консоль таблицу умножения "как на тетрадках"
 
-hight = int(input('Введите высоту елочки'))
+hight = int(input('Введите высоту елочки '))
 str_for_hrismas = '*'
-for i in range(hight):
-
-    print(str_for_hrismas)
+spase = " " * hight
+for i in range(1, hight):
+    print(spase, str_for_hrismas)
     str_for_hrismas += '*'
+    spase = " " * (hight - i)
+
+
+
+# б. Написать порграмму, которая выодит в консоль таблицу умножения "как на тетрадках"
+
+tabl = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+for i in tabl:
+    print('\n')
+    for j in tabl:
+        print(i, '*', j, '=', i*j)
