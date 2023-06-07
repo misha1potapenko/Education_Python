@@ -6,19 +6,20 @@ from random import randint
 num = int(randint(0, 1001))
 print("Загаданное число", num)
 count = 10
-comp_number = int(randint(0, 1001))
+comp_number = 500
+
 print("Число компьютера", comp_number)
 while count > 0:
     if comp_number == num:
         print("Угадал")
         break
-    if comp_number < num:
+    elif comp_number < num:
         print("Меньше")
         print("Число компьютера", comp_number)
         comp_number = int(comp_number + (comp_number/2))
         count -= 1
         continue
-    if comp_number > num:
+    elif comp_number > num:
         print("Больше")
         print("Число компьютера", comp_number)
         comp_number = int(comp_number - (comp_number/2))
