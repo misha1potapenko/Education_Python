@@ -8,7 +8,7 @@
 # операцией, даже ошибочной
 # ✔ Любое действие выводит сумму денег
 
-class Cash_mashine:
+class Cash_machine:
     'Класс банкомат с некотрыми полями и функциями'
 
     def __init__(self, cash, working):
@@ -22,9 +22,13 @@ class Cash_mashine:
 
     def on_off(self):
         if self.working:
-            print("Банкомат работает")
+            return ("Банкомат работает")
         else:
-            print("Банкомат не работает")
+            return ("Банкомат не работает")
+
+
+new_cash_machine = Cash_machine(1000000, True)
+print(new_cash_machine.on_off())
 
 
 
