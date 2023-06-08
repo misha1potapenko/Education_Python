@@ -11,16 +11,20 @@
 class Cash_mashine:
     'Класс банкомат с некотрыми полями и функциями'
 
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
+    def __init__(self, cash, working):
+        self.cash = cash
+        self.working = working
+
+
 
     def getWidth(self):
-        return self.width
+        return self.cash
 
-    def getHeight(self):
-        return self.height
+    def on_off(self):
+        if self.working:
+            print("Банкомат работает")
+        else:
+            print("Банкомат не работает")
 
-    # Метод расчета площади.
-    def getArea(self):
-        return self.width * self.height
+
+
