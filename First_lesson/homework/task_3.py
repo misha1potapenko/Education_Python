@@ -10,6 +10,8 @@ comp_number = 500
 
 print("Число компьютера", comp_number)
 while count > 0:
+    temp_1 = 0
+    temp_2 = 0
     if comp_number == num:
         print("Угадал")
         break
