@@ -29,14 +29,14 @@ class CashMachine:
         else:
             return ("Банкомат не работает")
 
-    def get_money(self, my_card):
+    def get_money(self, my_card):  #здесь нужно создать функцию выдачи денег с карты
         my_card = Card(10000)
         return (mycard.)
 
 
 
 
-new_cash_machine = Cash_machine(1000000, True)
+new_cash_machine = CashMachine(1000000, True)
 print(new_cash_machine.on_off())
 
 
