@@ -7,17 +7,20 @@
 # ✔ При превышении суммы в 5 млн, вычитать налог на богатство 10% перед каждой
 # операцией, даже ошибочной
 # ✔ Любое действие выводит сумму денег
+from Card import Card
 
-class Cash_machine:
+
+
+class CashMachine:
     'Класс банкомат с некотрыми полями и функциями'
 
     def __init__(self, cash, working):
         self.cash = cash
         self.working = working
 
+    my_card = Card(10000)
 
-
-    def getWidth(self):
+    def show_cash(self):
         return self.cash
 
     def on_off(self):
@@ -25,6 +28,12 @@ class Cash_machine:
             return ("Банкомат работает")
         else:
             return ("Банкомат не работает")
+
+    def get_money(self, my_card):
+        my_card = Card(10000)
+        return (mycard.)
+
+
 
 
 new_cash_machine = Cash_machine(1000000, True)
