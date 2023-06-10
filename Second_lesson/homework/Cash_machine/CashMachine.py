@@ -37,10 +37,10 @@ class CashMachine:
 
 
 my_card = Card()   # Создаем экземпляр карты
-my_card.set_money(5555)   # создаем баланс карты
+my_card.set_money(10000)   # создаем баланс карты
 
 new_cash_machine = CashMachine(1_000_000_000, True)
 print(new_cash_machine.on_off())
-print(new_cash_machine.get_money())
-print(new_cash_machine.add_money())
+new_cash_machine.get_money()
+new_cash_machine.add_money()
 
