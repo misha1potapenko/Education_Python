@@ -14,9 +14,6 @@ class CashMachine:
 
     'Класс банкомат с некотрыми полями и функциями'
 
-    my_card = Card(10000)
-
-
     def __init__(self, cash, working):
         self.cash = cash
         self.working = working
@@ -30,15 +27,21 @@ class CashMachine:
         else:
             return ("Банкомат не работает")
 
-    def get_money(self, my_card):  #здесь нужно создать функцию выдачи денег с карты
-        sum_get = int(input("Введите сумму выдачи: "))
+    def get_money(self):  #здесь нужно создать функцию выдачи денег с карты
+        sum_card = int(input("Введите сумму снятия: "))
+        my_card.get_money(sum_card)
 
-        return print(f"Остаток на счете: {my_card.money - sum_get}")
+
+    def add_money(self):  #здесь нужно создать функцию добавления денег на карту
+        sum_card = int(input("Введите сумму внесения: "))
+        my_card.add_money(sum_card)
 
 
-my_card = Card(10000)
-new_cash_machine = CashMachine(1000000, True)
+my_card = Card()   # Создаем экземпляр карты
+my_card.set_money(5555)   # создаем баланс карты
+
+new_cash_machine = CashMachine(1_000_000_000, True)
 print(new_cash_machine.on_off())
-print(new_cash_machine.get_money(my_card))
-
+print(new_cash_machine.get_money())
+print(new_cash_machine.add_money())
 

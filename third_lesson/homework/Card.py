@@ -1,7 +1,26 @@
 class Card:
 
-    def __init__(self, money):
-        self.money = money
+    def __init__(self):
+        self.money = 0
 
-    # def get_money(self, sum_for_get_money): #Создаем функцию выдачи денег с карты
-    #     return (self.money - sum_for_get_money)
+    def show_money(self):
+        """Show how money in card"""
+        print(f"In card: {self.money}")
+
+    def set_money(self, set_money):
+        """ Set balance in card"""
+        self.money = set_money
+        print(self.money)
+
+    def add_money(self, set_money):
+        """ Set balance in card"""
+        self.money += set_money
+        print(self.money)
+
+    def get_money(self, set_money):
+        """ Set balance in card"""
+        self.money -= set_money
+        print(self.money)
+
+
+
