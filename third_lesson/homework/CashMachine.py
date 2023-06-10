@@ -10,15 +10,16 @@
 from Card import Card
 
 
-
 class CashMachine:
+
     'Класс банкомат с некотрыми полями и функциями'
+
+    my_card = Card(10000)
+
 
     def __init__(self, cash, working):
         self.cash = cash
         self.working = working
-
-    my_card = Card(10000)
 
     def show_cash(self):
         return self.cash
@@ -30,14 +31,14 @@ class CashMachine:
             return ("Банкомат не работает")
 
     def get_money(self, my_card):  #здесь нужно создать функцию выдачи денег с карты
-        my_card = Card(10000)
-        return (mycard.)
+        sum_get = int(input("Введите сумму выдачи: "))
+
+        return print(f"Остаток на счете: {my_card.money - sum_get}")
 
 
-
-
+my_card = Card(10000)
 new_cash_machine = CashMachine(1000000, True)
 print(new_cash_machine.on_off())
-
+print(new_cash_machine.get_money(my_card))
 
 
