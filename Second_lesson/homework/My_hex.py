@@ -5,7 +5,7 @@ my_number = int(input("Введите целое число "))
 
 
 def do_hex(my_number):
-    list_for_hex = []
+    list_for_hex = []  # Create list for add remainder
     result = 0
     string_for_list = ""
     while my_number > 0:
