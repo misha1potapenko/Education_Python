@@ -52,3 +52,4 @@ print(new_cash_machine.on_off())
 new_cash_machine.get_money()
 new_cash_machine.add_money()
 
+
