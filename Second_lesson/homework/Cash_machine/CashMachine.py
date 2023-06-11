@@ -28,8 +28,15 @@ class CashMachine:
             return ("Банкомат не работает")
 
     def get_money(self):  #здесь нужно создать функцию выдачи денег с карты
+
         sum_card = int(input("Введите сумму снятия: "))
-        my_card.get_money(sum_card)
+        if sum_card >= 50:
+            if (sum_card * 0.015) > 30:
+                my_card.get_money(sum_card + (sum_card * 0.015))
+            else:
+                my_card.get_money(sum_card + 30)
+        else:
+            print("Введите сумму кратную 50 ")
 
     def add_money(self):  #здесь нужно создать функцию добавления денег на карту
         sum_card = int(input("Введите сумму внесения: "))
@@ -38,6 +45,7 @@ class CashMachine:
 
 my_card = Card()   # Создаем экземпляр карты
 my_card.set_money(10000)   # создаем баланс карты
+my_card.show_money()
 
 new_cash_machine = CashMachine(1_000_000_000, True)
 print(new_cash_machine.on_off())

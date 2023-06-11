@@ -10,7 +10,7 @@ class Card:
     def set_money(self, set_money):
         """ Set balance in card"""
         self.money = set_money
-        print(self.money)
+
 
     def add_money(self, set_money):
         """ Set balance in card"""
