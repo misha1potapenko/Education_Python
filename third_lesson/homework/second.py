@@ -30,8 +30,19 @@ text = 'В ту же ночь приехал я в Симбирск, где до
        'на часы, положил кий и объявил мне, что я проиграл сто рублей. Это меня немножко смутило. Деньги мои были' \
        ' у Савельича. Я стал извиняться.'
 
-for x, y in ('.', ''), (',', ''):   # Убираем знаки препинания заменой через цикл
-    text = text.replace(x, y)
 
-text.lower()
-print(text.split(' '))
+def count_duplicate(text: str):
+
+    for x, y in ('.', ''), (',', ''):   # Убираем знаки препинания заменой через цикл
+        text = text.replace(x, y)
+
+    text.lower()
+    my_list = text.split(' ')
+
+    duplicates = []
+
+    for item in my_list:
+        if my_list.count(item) > 1 and item not in duplicates and len(duplicates) < 10:
+            duplicates.append(item)
+
+    print("Повторяющиеся элементы в списке:", duplicates)
