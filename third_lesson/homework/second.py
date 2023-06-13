@@ -43,7 +43,7 @@ def count_duplicate(text: str):
     duplicates = []
 
     for item in my_list:
-        if my_list.count(item) > 1 and item not in duplicates and len(duplicates) < 10:
+        if my_list.count(item) > 4 and item not in duplicates and len(duplicates) < 10:
             duplicates.append(item)
 
     print("Повторяющиеся элементы в списке:", duplicates)
