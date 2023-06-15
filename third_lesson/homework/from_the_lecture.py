@@ -16,15 +16,20 @@ my_dict = {'Иван': ('фонарь', 'котелок', 'палатка', 'н�
 
 
 def backpack_capacity(my_dict: dict):
-    for y in my_dict.values():
-        print(f" {y}")
+    for key, value in my_dict.items():
+        print(f"Имя: {key}  Что в рюкзаке: {value} ")
 
 
 backpack_capacity(my_dict)
 
+# ✔ Какие вещи уникальны, есть только у одного друга
 
-for key, value in my_dict.items():
-    print(f"Имя: {key}  Что в рюкзаке: {value} ")
-    for thing in value:
-        print(thing)
+for i in my_dict.values():
+    my_list = []
+    for x in i:
+
+        print(x, end=" ")
+
+
+
 
