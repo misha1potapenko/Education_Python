@@ -21,3 +21,10 @@ def backpack_capacity(my_dict: dict):
 
 
 backpack_capacity(my_dict)
+
+
+for key, value in my_dict.items():
+    print(f"Имя: {key}  Что в рюкзаке: {value} ")
+    for thing in value:
+        print(thing)
+
