@@ -37,12 +37,3 @@ def all_thing(my_dict: dict):
 all_thing(my_dict)
 
 
-# ✔ Какие вещи уникальны, есть только у одного друга
-
-def all_thing(my_dict: dict):
-    my_list = []
-    for i in my_dict.values():
-        for x in i:
-            if x not in my_list:
-                my_list.append(x)
-    print(f"какие вещи взяты {my_list}")
