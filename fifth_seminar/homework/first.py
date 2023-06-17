@@ -11,20 +11,7 @@
 # ✔Напишите функцию, которая принимает на вход строку —
 # абсолютный путь до файла. Функция возвращает кортеж из трёх элементов: путь, имя файла, расширение файла.
 
-# import os
-# from os import path
-#
-# p = os.path.abspath('first.py')
-# print(p)
-#
-#
-# name = os.path.basename(r'C:\python3\file.txt ')
-# print(name)
-#
-#
-# full_name = path.basename(r'C:\python3\file.tar.gz ')
-# name = path.splitext(full_name)[1]
-# print(name)
+
 
 
 def abs_path(abs_path: str) -> tuple:
@@ -41,3 +28,19 @@ my_string = r"C:\Users\misha\PycharmProjects\Education_Python\fifth_seminar\home
 
 
 print(abs_path(my_string))
+
+
+# import os
+# from os import path
+#
+# p = os.path.abspath('first.py')
+# print(p)
+#
+#
+# name = os.path.basename(r'C:\python3\file.txt ')
+# print(name)
+#
+#
+# full_name = path.basename(r'C:\python3\file.tar.gz ')
+# name = path.splitext(full_name)[1]
+# print(name)
