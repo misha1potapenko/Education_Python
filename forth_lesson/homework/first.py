@@ -15,15 +15,18 @@ matrix = [[1, 4, 7],
         [2, 5, 8],
         [3, 6, 9]]
 
-mat = [[0, 0, 0],
-        [0, 0, 0],
-        [0, 0, 0]]
 
-# iterate through rows
-for i in range(len(matrix)):
-    for j in range(len(matrix[0])):
-        mat[j][i] = matrix[i][j]
 
-for r in mat:
-    print(r)
+def for_reverse_matrix(matrix):
+    mat = [[0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0]]
 
+    for i in range(len(matrix)):
+        for j in range(len(matrix[0])):
+            mat[j][i] = matrix[i][j]
+
+    for r in mat:
+        print(r)
+
+for_reverse_matrix(matrix)
