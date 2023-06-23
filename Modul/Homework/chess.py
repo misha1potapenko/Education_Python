@@ -15,14 +15,14 @@ my_dict = {1: (1, 2),
 
 
 def my_chess(my_dict: dict):
-    my_dict = {1: (1, 2),
-               2: (3, 4),
-               3: (2, 2),
-               4: (2, 3),
-               5: (8, 4),
-               6: (2, 7),
-               7: (5, 8),
-               8: (5, 7), }
+    my_dict = {1: (8, 5),  # правильная расстановка
+               2: (6, 1),
+               3: (4, 8),
+               4: (2, 4),
+               5: (7, 7),
+               6: (5, 3),
+               7: (3, 6),
+               8: (1, 2), }
     for i in my_dict.values():
         for x in i:
             for j in my_dict.values():
@@ -42,4 +42,4 @@ def my_chess(my_dict: dict):
 
 
 
-my_chess(my_dict)
+print(my_chess(my_dict))
