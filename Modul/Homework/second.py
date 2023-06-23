@@ -6,34 +6,49 @@
 import random as rd
 
 
+def add_in_dict():
+    my_dict = {1: (rd.randint(1, 8), rd.randint(1, 8)),
+               2: (rd.randint(1, 8), rd.randint(1, 8)),
+               3: (rd.randint(1, 8), rd.randint(1, 8)),
+               4: (rd.randint(1, 8), rd.randint(1, 8)),
+               5: (rd.randint(1, 8), rd.randint(1, 8)),
+               6: (rd.randint(1, 8), rd.randint(1, 8)),
+               7: (rd.randint(1, 8), rd.randint(1, 8)),
+               8: (rd.randint(1, 8), rd.randint(1, 8)), }
+    return my_dict
+
+
 def my_chess():
-    count = 0
-    while count != 4:
-        my_dict = {1: (rd.randint(1, 8), rd.randint(1, 8)),
-                   2: (rd.randint(1, 8), rd.randint(1, 8)),
-                   3: (rd.randint(1, 8), rd.randint(1, 8)),
-                   4: (rd.randint(1, 8), rd.randint(1, 8)),
-                   5: (rd.randint(1, 8), rd.randint(1, 8)),
-                   6: (rd.randint(1, 8), rd.randint(1, 8)),
-                   7: (rd.randint(1, 8), rd.randint(1, 8)),
-                   8: (rd.randint(1, 8), rd.randint(1, 8)), }
+    while True:
+        count = 0
+        my_dict = add_in_dict()
+
         for i in my_dict.values():
             for x in i:
                 for j in my_dict.values():
                     if i == j:
                         continue
                     elif x in j:  # Здесь проверка на то что есть ли на линии (столбе) еще один ферзь
-                        return False
-                    elif i[0] + i[1] == j[0] + j[1]:  # Здесь проверка диагоналей
-                        return False
-                    elif i[0] - i[1] == j[0] - j[1]:  # Здесь проверка диагоналей
-                        return False
-            else:
-                count += 1
-                print(my_dict, end='######')
-                return True
+                        my_dict = add_in_dict()
+                        count = 0
+                        continue
+                    elif i[0] + i[1] == j[0] + j[1]:  # Здесь проверка диагоналей в одну сторону
+                        my_dict = add_in_dict()
+                        count = 0
+                        continue
+                    elif i[0] - i[1] == j[0] - j[1]:  # Здесь проверка диагоналей в другую сторону
+                        my_dict = add_in_dict()
+                        count = 0
+                        continue
+                    else:
+                        count += 1
+                        if count == 40:
+                            print(my_dict)
+                            return True
+
 
 
 
 
 my_chess()
+print(add_in_dict())
