@@ -1,45 +1,35 @@
-# Добавьте в пакет, созданный на семинаре шахматный модуль. Внутри него напишите код, решающий задачу о 8 ферзях.
-# Известно, что на доске 8×8 можно расставить 8 ферзей так, чтобы они не били друг друга.
-# Вам дана расстановка 8 ферзей на доске, определите, есть ли среди них пара бьющих друг друга.
-# Программа получает на вход восемь пар чисел, каждое число от 1 до 8 - координаты 8 ферзей.
-# Если ферзи не бьют друг друга верните истину, а если бьют - ложь.
+from random import randint
 
-my_dict = {1: (1, 2),    # правильная расстановка
-           2: (2, 5),
-           3: (3, 8),
-           4: (4, 6),
-           5: (5, 3),
-           6: (6, 7),
-           7: (7, 2),
-           8: (8, 4), }
+amount = 4
+for_amount = 5
 
 
-def my_chess(my_dict: dict):
-    my_dict = {1: (1, 1),
-               2: (6, 1),
-               3: (4, 8),
-               4: (2, 2),
-               5: (7, 7),
-               6: (5, 3),
-               7: (7, 7),
-               8: (1, 2), }
-    for i in my_dict.values():
-        for x in i:
-            for j in my_dict.values():
-                if i == j:
-                    continue
-                elif x in j:   # Здесь проверка на то что есть ли на линии (столбе) еще один ферзь
-                    return False
-                elif i[0]+i[1] == j[0]+j[1]: # Здесь проверка диагоналей
-                    return False
-                elif i[0]-i[1] == j[0]-j[1]: # Здесь проверка диагоналей
-                    return False
-                else:
-                    return True
+def are_queens_attacking_each_other(queens: list(tuple())):
+    for i in range(len(queens)):
+        for j in range(i + 1, len(queens)):
+            if queens[i][0] == queens[j][0] or \
+                    queens[i][1] == queens[j][1] or \
+                    abs(queens[i][0] - queens[j][0]) == abs(queens[i][1] - queens[j][1]):
+                return False
+    return True
 
 
+def position_generation() -> list:
+    result = []
+    queens = []
+    count = 0
+
+    while count != amount:
+        for _ in range(for_amount):
+            queens.append((randint(1, 8), randint(1, 8)))
+        if are_queens_attacking_each_other(queens):
+            result.append(queens)
+            count += 1
+        queens = []
+
+    return result
 
 
-
-
-print(my_chess(my_dict))
+if __name__ == '__main__':
+    for i, value in enumerate(position_generation(), 1):
+        print(f'{i} - {value}')
