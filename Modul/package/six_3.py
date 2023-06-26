@@ -61,7 +61,7 @@ def fun_2(zagad: str, number: int = 0):
 # Для формирования результатов используйте генераторное выражение.
 
 
-from modul_ import zagadka as zag, puzzle
+
 
 # print(zag('Зимой и летом одним цветом?', ['елка', 'ёлка', 'ель'], 5))
 puzzle()

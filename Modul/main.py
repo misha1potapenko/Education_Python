@@ -1,4 +1,6 @@
-import guess
-import sys
-init_numbers = list(map(int, [i for i in sys.argv][1:]))
-guess.guess_f(*init_numbers)
+from package import puzzle
+# import sys
+# init_numbers = list(map(int, [i for i in sys.argv][1:]))
+
+
+puzzle()
