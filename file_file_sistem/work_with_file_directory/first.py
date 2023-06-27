@@ -1,4 +1,5 @@
 import os
+import shutil
 from pathlib import Path
 
 print(os.getcwd())
@@ -50,3 +51,22 @@ for dir_path, dir_name, file_name in os.walk(os.getcwd()):
 # Функция возвращает кортеж из трёх значений:
 # ➢ dir_path — абсолютный путь до каталога
 # ➢ dir_names — список с названиями всех каталогов, находящихся в dir_path
+
+# переименование файлов
+os.rename('old_name.py', 'new_name.py')
+p = Path('old_file.py')
+p.rename('new_file.py')
+Path('new_file.py').rename('newest_file.py')
+
+# перемещение файлов
+os.replace('newest_file.py', os.path.join(os.getcwd(), 'dir', 'new_name.py'))
+old_file = Path('new_name.py')
+new_file = old_file.replace(Path.cwd() / 'new_os_dir' / old_file)
+
+ # копирование файла
+
+shutil.copy('one.txt', 'dir')
+shutil.copy2('two.txt', 'dir')
+
+#  копирование каталога
+shutil.copytree('dir', 'one_more_dir')
