@@ -13,6 +13,7 @@ text_macarenko = ['В то же время Макаренко хорошо по�
 
 with open('new_data.txt', 'a', encoding='utf-8') as f:
     f.writelines('\n'.join(text_macarenko))
+    f.write('\n')
     for line in text:
         res = f.write(f'{line}\n')
 print(f'{res = }\n{len(line) = }')
