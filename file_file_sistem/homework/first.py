@@ -18,8 +18,8 @@ def creating_folder(number_files: int, extension: str):
         os.mkdir('my_dir')
     # создание файлов в директории
     for _ in range(number_files):
-        file_name = ''.join(sample(ascii_letters, 5)) + extension
-        demo_path = os.path.join(os.getcwd(), "my_dir", file_name)
+        file_name = ''.join(sample(ascii_letters, 5)) + extension  # создание рандомного имени
+        demo_path = os.path.join(os.getcwd(), "my_dir", file_name)  #  это создаем путь к файлу
 
         with open(demo_path, 'w'):
             continue
@@ -38,6 +38,7 @@ def rename_files(end_name, digits, source_extension, dest_extension, name_range=
     # Пробегаемся по всем файлам
     for i, file in enumerate(filtered_files, 1):
         # Получаем оригинальное имя файла
+        # далее описано как работает splitext
         '''Split the pathname path into a pair (root, ext) such that root + ext == path,
          and the extension, ext, is empty or begins with a period and contains at most one period.
 
@@ -49,6 +50,7 @@ If the path contains no extension, ext will be '':
         old_name = os.path.splitext(file)[0][name_range[0]:name_range[1]]
 
         # Формируем имя файла с указанным окончанием и порядковым номером
+        #  Далее описано как работает zfill
         '''Return a copy of the string left filled with ASCII '0' digits to make a string of 
         length width. A leading sign prefix ('+'/'-') is handled by inserting the padding
          after the sign character rather than before. The original string is returned if 
