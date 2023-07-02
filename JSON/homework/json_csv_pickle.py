@@ -10,14 +10,20 @@
 import os
 from os.path import join, getsize
 
+
 def walk_in_directory(file_path):
     for root, dirs, files in os.walk(file_path):
-        print(f'Это директория(и) {dirs}', end="\n")
-        print(f'Это файл(ы) {files}', end="\n")
-        print(root, "consumes", end="\n")
-        demo_path = os.path.join(os.getcwd(), file_path)
-        print(demo_path)
-        # print(sum(getsize(join(root, name)) for name in files), end=" ")
+        folder = root.split('\\')
+        print(f'В директории {folder[-1]}', end="\n")
+        if not dirs:
+            print("В этой папке нет директорий")
+        else:
+
+            print(f'Директория(и) {dirs}', end="\n")
+        print(f'Файл(ы) {files}', end="\n")
+        # print(f' В директории {root}', end="\n")
+
+        print(sum(getsize(join(root, name)) for name in files), end="\n")
         # print("bytes in", len(files), "non-directory files")
         # if 'CVS' in dirs:
         #     # не просматриваем каталог `CVS`
