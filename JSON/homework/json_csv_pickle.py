@@ -6,7 +6,7 @@
 # # ○Для каждого объекта укажите файл это или директория.
 # # ○Для файлов сохраните его размер в байтах, а для директорий
 # # размер файлов в ней с учётом всех вложенных файлов и директорий.
-
+import json
 import os
 from os.path import join, getsize
 
@@ -24,6 +24,8 @@ def walk_in_directory(file_path):
         # print(f' В директории {root}', end="\n")
 
         print(sum(getsize(join(root, name)) for name in files), end="\n")
+
+
         # print("bytes in", len(files), "non-directory files")
         # if 'CVS' in dirs:
         #     # не просматриваем каталог `CVS`
