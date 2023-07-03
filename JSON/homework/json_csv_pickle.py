@@ -25,6 +25,11 @@ def walk_in_directory(file_path):
 
         print(sum(getsize(join(root, name)) for name in files), end="\n")
 
+        to_json = {'trunk': trunk_template, 'access': access_template}
+
+        with open('sw_templates.json', 'w') as f:
+            json.dump(to_json, f)
+
 
         # print("bytes in", len(files), "non-directory files")
         # if 'CVS' in dirs:
@@ -33,3 +38,25 @@ def walk_in_directory(file_path):
 
 
 walk_in_directory('C:\\Users\\misha\\PycharmProjects\\Education_Python\\JSON')
+
+
+import json
+
+trunk_template = [
+    'switchport trunk encapsulation dot1q', 'switchport mode trunk',
+    'switchport trunk native vlan 999', 'switchport trunk allowed vlan'
+]
+
+access_template = [
+    'switchport mode access', 'switchport access vlan',
+    'switchport nonegotiate', 'spanning-tree portfast',
+    'spanning-tree bpduguard enable'
+]
+
+to_json = {'trunk': trunk_template, 'access': access_template}
+
+with open('sw_templates.json', 'w') as f:
+    json.dump(to_json, f)
+
+with open('sw_templates.json') as f:
+    print(f.read())
