@@ -11,11 +11,12 @@ class Circle:
         self.radius = radius
 
     def circumference_length(self):
-        # print((2*math.pi*self.radius)**2)
         return 2*math.pi*self.radius
 
     def square(self):
-        return (math.pi * self.radius)**2
+        return math.pi * self.radius**2
+
+
 
 
 
