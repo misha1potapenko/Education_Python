@@ -25,7 +25,7 @@ def walk_in_directory(file_path):
             print(f'Директория(и) {dirs}', end="\n")
         print(f'Файл(ы) {files}', end="\n")
         print(sum(getsize(join(root, name)) for name in files), end="\n")
-        print(root)
+
 
         # запись в JSON file
         str_for_json = " ".join(files)
@@ -44,6 +44,11 @@ def walk_in_directory(file_path):
         # запись в pickle  file
         with open('data.pickle', 'wb') as f:
             pickle.dump(to_json, f)
+
+        with open('data.pickle', 'rb') as f:
+            ...
+            data_new = pickle.load(f)
+        print(data_new)
 
 
 
