@@ -27,16 +27,24 @@ import csv
 # print('The solution are {0} and {1}'.format(sol1, sol2))
 import random
 
-with open('number_for_decorator.csv', 'a', newline='') as csvfile:
-    list_for_csv = [i for i in range(1, 100)]
-    random.shuffle(list_for_csv)
-    spamwriter = csv.writer(csvfile, delimiter=' ',
-                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    spamwriter.writerow(list_for_csv)
+# функция для записи csv файла
 
 
+def csv_writer():
+    with open('number_for_decorator.csv', 'a', newline='') as csvfile:
+        writer_csv = csv.writer(csvfile, delimiter=' ',
+                                quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        for i in range(100, 1000):
+            list_for_csv = [i for i in range(1, 100)]
+            random.shuffle(list_for_csv)   # перемешиваем список
+            csv_list = random.sample(list_for_csv, k=3)  # выбираем здесь три случайных числа из списка
+            writer_csv.writerow(csv_list)
 
-with open('number_for_decorator.csv', newline='') as csvfile:
-    spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-    for row in spamreader:
-        print(', '.join(row))
+
+def csv_reader():
+    with open('number_for_decorator.csv', newline='') as csvfile:
+        reader_csv = csv.reader(csvfile, delimiter=' ', quotechar='|')
+        for row in reader_csv:
+            print(', '.join(row))
+
+csv_writer()
