@@ -14,11 +14,7 @@ import csv
 import cmath
 from typing import Callable
 
-def find_sqrt(a: int, b: int, c: int):
-    d = (b ** 2) - (4 * a * c)
-    sol1 = (-b - cmath.sqrt(d)) / (2 * a)
-    sol2 = (-b + cmath.sqrt(d)) / (2 * a)
-    print(f'The solution are {sol1} and {sol2}')
+
 
 
 # функция для записи csv файла
@@ -47,9 +43,9 @@ def csv_reader():
 
 
 def main(func: Callable):
-    def wrapper(*args, **kwargs):
-        csv_writer()
-        result = func(*args, **kwargs)
+    def wrapper(*args, ** kwargs):
+        csv_reader()  # эта функция возвращает список из 3-ех чисел
+        result = func(int(csv_reader()[0]), int(csv_reader()[1]), int(csv_reader()[2]))
         print(f'Результат функции {func.__name__}: {result}')
         return result
     return wrapper
@@ -62,7 +58,21 @@ def factorial(n: int) -> int:
         return f
 
 
-print(f'{factorial(1000) = }')
-control = main(factorial)
-print(f'{control.__name__ = }')
-print(f'{control(1000) = }')
+# print(f'{factorial(1000) = }')
+# control = main(factorial)
+# print(f'{control.__name__ = }')
+# print(f'{control(1000) = }')
+
+
+def find_sqrt(a: int, b: int, c: int):
+    d = (b ** 2) - (4 * a * c)
+    sol1 = (-b - cmath.sqrt(d)) / (2 * a)
+    sol2 = (-b + cmath.sqrt(d)) / (2 * a)
+    print(f'The solution are {sol1} and {sol2}')
+    return sol2, sol1
+
+
+control1 = main(find_sqrt)
+print(f'{control1(5,7,16) = } ')
+
+
