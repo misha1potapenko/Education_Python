@@ -12,7 +12,7 @@
 import random
 import csv
 import cmath
-
+from typing import Callable
 
 def find_sqrt(a: int, b: int, c: int):
     d = (b ** 2) - (4 * a * c)
@@ -38,6 +38,31 @@ def csv_writer():
 def csv_reader():
     with open('number_for_decorator.csv', newline='') as csvfile:
         reader_csv = csv.reader(csvfile, delimiter=' ', quotechar='|')
+        when_stop = random.randint(1, 900)   # с какой строчки взять 3 числа
+        count = 0
         for row in reader_csv:
-            print(', '.join(row))
+            count += 1
+            if count == when_stop:
+                return row
 
+
+def main(func: Callable):
+    def wrapper(*args, **kwargs):
+        csv_writer()
+        result = func(*args, **kwargs)
+        print(f'Результат функции {func.__name__}: {result}')
+        return result
+    return wrapper
+
+
+def factorial(n: int) -> int:
+    f = 1
+    for i in range(2, n + 1):
+        f *= i
+        return f
+
+
+print(f'{factorial(1000) = }')
+control = main(factorial)
+print(f'{control.__name__ = }')
+print(f'{control(1000) = }')
