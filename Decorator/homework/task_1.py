@@ -11,9 +11,8 @@
 
 import random
 import csv
-import cmath
 from typing import Callable
-
+"""Для корректной работы программы в начале надо запустить csv_writer для записи значений в файл"""
 
 # функция для записи csv файла
 
@@ -45,6 +44,11 @@ def main(func: Callable):
         csv_reader()  # эта функция возвращает список из 3-ех чисел
         result = func(int(csv_reader()[0]), int(csv_reader()[1]), int(csv_reader()[2]))
         print(f'Результат функции {func.__name__}: {result}')
+        # запись в csv файл
+        with open("sqrt.csv", mode="a", encoding='utf-8') as w_file:
+            file_writer = csv.writer(w_file, delimiter=" ", lineterminator="\r")
+            file_writer.writerow(result)
+
         return result
 
     return wrapper

@@ -29,7 +29,7 @@ def walk_in_directory(file_path):
 
         # запись в JSON file
         str_for_json = " ".join(files)
-        to_json = {root: dirs, 'files': str_for_json, 'Size': sum(getsize(join(root, name)) for name in files) }
+        to_json = {root: dirs, 'files': str_for_json, 'Size': sum(getsize(join(root, name)) for name in files)}
         with open('to_json.json', 'a') as f:
             json.dump(to_json, f, sort_keys=True, indent=2)
 
