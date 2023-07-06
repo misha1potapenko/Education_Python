@@ -8,7 +8,7 @@
 # ○ Декоратор, сохраняющий переданные параметры и результаты работы
 # функции в json файл.
 # Соберите пакет с играми из тех файлов, что уже были созданы в рамках курса
-
+import json
 import random
 import csv
 from typing import Callable
@@ -48,6 +48,10 @@ def main(func: Callable):
         with open("sqrt.csv", mode="a", encoding='utf-8') as w_file:
             file_writer = csv.writer(w_file, delimiter=" ", lineterminator="\r")
             file_writer.writerow(result)
+        # запись в JSON файл
+        to_json = {"Roots": result}
+        with open('to_json.json', 'a', encoding='utf-8') as f:
+            json.dump(to_json, f, sort_keys=True, indent=2)
 
         return result
 
@@ -65,7 +69,7 @@ def factorial(n: int) -> int:
 def find_sqrt(a: int = None, b: int = None, c: int = None):
     d = (b ** 2) - (4 * a * c)
     if d < 0:
-        return f'Корней нет {d =}'
+        return f'No roots {d =}'
     else:
         x1 = (-b + d ** 0.5) / (2 * a)
         x2 = (-b - d ** 0.5) / (2 * a)
