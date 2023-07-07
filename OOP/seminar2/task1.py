@@ -15,7 +15,8 @@ class MyString(str):
         instance.date = datetime.datetime.now()
         return instance
 
-    def __doc__(self):
+    @staticmethod
+    def __doc__():
         return """Строка документации для класса моя строка, который дополнительно хранит имя строки и время создания"""
 
 
