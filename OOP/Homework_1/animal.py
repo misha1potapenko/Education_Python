@@ -17,6 +17,8 @@ class Dog(Animal):
     def print_specific(self):
         return f'{self.commands}'
 
+
+
 class Fish(Animal):
     def __init__(self, name: str = None, breed: str = 'unknown', count_fins: int = 0):
         super().__init__(name, breed)
