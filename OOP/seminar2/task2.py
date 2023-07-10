@@ -25,8 +25,15 @@ class Archive:
     def __repr__(self):
         return f'{self.name} {self.age}'
 
+    def __str__(self):
+        return f'Архив - {self._archive}'
+
 
 
 new_ex = Archive('hsjdhs', 1)
-help(new_ex)
+new_ex1 = Archive('Pety', 2)
+new_ex2 = Archive('Sara', 3)
+print(new_ex2)
+print(new_ex1)
+# help(new_ex)
 
