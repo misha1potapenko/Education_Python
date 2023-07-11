@@ -5,6 +5,7 @@
 # Параметр k передаётся при создании экземпляра.
 # Добавьте метод для просмотра ранее вызываемых значений и
 # их факториалов.
+import json
 from collections import defaultdict
 
 
@@ -12,6 +13,7 @@ class Factorial:
 
     def __init__(self):
         self.results = defaultdict(list)
+
 
     def __call__(self, number):
         result = 1
