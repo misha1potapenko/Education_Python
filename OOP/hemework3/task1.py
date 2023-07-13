@@ -10,28 +10,30 @@
 
 class Descriptor:
     def __init__(self):
-        self.__fuel_cap = 0
+        self.__surname = ""
 
     def __get__(self, instance, owner):
-        return self.__fuel_cap
+        return self.__surname
 
     def __set__(self, instance, value):
-        if isinstance(value, int):
+        if isinstance(value, str) and value.istitle():
             print(value)
         else:
-            raise TypeError("Fuel Capacity can only be an integer")
+            raise TypeError("A string must be entered here with the first letter capitalized")
 
-        if value < 0:
-            raise ValueError("Fuel Capacity can never be less than zero")
+        if len(value) == 0:
+            raise ValueError("The string can not be empty ")
 
-        self.__fuel_cap = value
+        self.__surname = value
 
     def __delete__(self, instance):
-        del self.__fuel_cap
+        del self.__surname
 
 
 class Car:
-    fuel_cap = Descriptor()
+    surname = Descriptor()
+    name = Descriptor()
+    patronymic = Descriptor()
 
     def __init__(self, surname, name, patronymic):
         self.surname = surname
@@ -42,7 +44,7 @@ class Car:
         return f'{self.surname} {self.name} {self.patronymic} '
 
 
-car2 = Car("BMW", "X7", 40)
+car2 = Car("Dfdfd", "Dsdfsdfsd")
 print(car2)
 # 40
 # BMW model X7 with a fuel capacity of 40 ltr.
