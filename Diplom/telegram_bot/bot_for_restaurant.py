@@ -11,6 +11,8 @@ with open("token.txt", "r") as file1:
 
 bot = Bot(token=token)
 dp = Dispatcher(bot)
+async def on_startup(_):
+    print('Бот вышел в онлайн')
 
 '''Customer'''
 @dp.message_handler(commands=['start','help'])
@@ -21,7 +23,7 @@ async def command_start(message : types.Message):
     except:
         await message.reply('Общение с ботом только в ЛС, напишите ему: \nhttps://t.me/Restaurant_vrn_bot')
 
-@dp.message_handler(commands=['Режим работы'])
+@dp.message_handler(commands=['Режим_работы'])
 async def command_start(message : types.Message):
     await bot.send_message(message.from_user.id, 'Вс-Чт с 9:00 до 24:00, Пт,Сб с 12:00 до 02:00')
 @dp.message_handler(commands=['Контакты'])
@@ -45,4 +47,4 @@ async def echo_send(message: types.Message):
     # await bot.send_message(message.from_user.id, message.text)
 
 
-executor.start_polling(dp, skip_updates=True)  # не отвечать если бот не онлайн
+executor.start_polling(dp, skip_updates=True, on_startup=on_startup)  # не отвечать если бот не онлайн
