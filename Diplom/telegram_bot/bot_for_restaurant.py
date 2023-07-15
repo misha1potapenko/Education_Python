@@ -12,10 +12,35 @@ with open("token.txt", "r") as file1:
 bot = Bot(token=token)
 dp = Dispatcher(bot)
 
+'''Customer'''
+@dp.message_handler(commands=['start','help'])
+async def command_start(message : types.Message):
+    try:
+        await bot.send_message(message.from_user.id, 'Приятного аппетита')
+        await message.delete()
+    except:
+        await message.reply('Общение с ботом только в ЛС, напишите ему: \nhttps://t.me/Restaurant_vrn_bot')
+
+@dp.message_handler(commands=['Режим работы'])
+async def command_start(message : types.Message):
+    await bot.send_message(message.from_user.id, 'Вс-Чт с 9:00 до 24:00, Пт,Сб с 12:00 до 02:00')
+@dp.message_handler(commands=['Контакты'])
+async def command_start(message : types.Message):
+    await bot.send_message(message.from_user.id, 'г.Воронеж, ул Генерала Лизюкова д. 35 Тел. 8-952-553-73-82')
+
+
+
+
+'''A common part'''
+
+
 
 @dp.message_handler()
 async def echo_send(message: types.Message):
-    await message.answer(message.text)
+    if message.text == "Привет":
+        await message.answer("Здравствуйте")
+    # else:
+    #     await message.answer("Поздоровайтесь пожалуйста")
     # await message.reply(message.text)
     # await bot.send_message(message.from_user.id, message.text)
 
