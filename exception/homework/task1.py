@@ -41,11 +41,12 @@ class Triangle:
         print("Площадь: ", s)
 
 
-tr = Triangle(25, 10.0, 30)
-tr.__exists__(-5, 10.0, 30)
-if tr:
-    tr.info()
-tr = Triangle(10.0, 10.0, 15)
-print('=*' * 43)
-if tr:
-    tr.info()
+if __name__ == '__main__':
+    tr = Triangle(25, 10.0, 30)
+    tr.__exists__(0, 10.0, 30)
+    if tr:
+        tr.info()
+    tr = Triangle(10.0, 10.0, 15)
+    print('=*' * 43)
+    if tr:
+        tr.info()
