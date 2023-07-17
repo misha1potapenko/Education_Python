@@ -4,6 +4,7 @@
 # Например нельзя создавать прямоугольник со сторонами отрицательной длины.
 
 import math
+from my_exeption import ProblemSideTriangle
 
 
 class Triangle:
@@ -13,7 +14,7 @@ class Triangle:
             obj = super(Triangle, cls).__new__(cls)
             return obj
         else:
-            raise Exception("Треугольник не может быть построен на этих сторонах!")
+            raise ProblemSideTriangle
 
     def __init__(self, a, b, c):
         self.a = a
@@ -22,7 +23,10 @@ class Triangle:
 
     @classmethod
     def __exists__(cls, a, b, c):
-        return a + b > c and b + c > a and a + c > b and a, b, c > 0
+        if (a + b > c and b + c > a and a + c > b) and (a, b, c > 0):
+            return True
+        else:
+            raise ProblemSideTriangle
 
     def info(self):
         print("Стороны: ", self.a, self.b, self.c)
@@ -30,11 +34,15 @@ class Triangle:
         print("Периметр: ", self.a + self.b + self.c)
 
         p = (self.a + self.b + self.c) / 2
-        s = math.sqrt(p * (p - self.a) * (p - self.b) * (p - self.c))
+        try:
+            s = math.sqrt(p * (p - self.a) * (p - self.b) * (p - self.c))
+        except ProblemSideTriangle as p:
+            print(p)
         print("Площадь: ", s)
 
 
-tr = Triangle(25.0, 10.0, 30)
+tr = Triangle(25, 10.0, 30)
+tr.__exists__(-5, 10.0, 30)
 if tr:
     tr.info()
 tr = Triangle(10.0, 10.0, 15)
