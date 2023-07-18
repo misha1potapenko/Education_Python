@@ -5,12 +5,14 @@ import doctest
 
 class Matrix:
     """
-    >>> print(my_matrix)
-    1   2   3
-    4   5   6
-    7   8   9
     >>> print(my_matrix.size())
     (3, 3)
+    >>> print(my_matrix.__getitem__(1))
+    [4, 5, 6]
+    >>> print(my_matrix.are_same(my_matrix2))
+    False
+    >>> print(my_matrix.are_same(my_matrix))
+    True
     """
     def __init__(self, matrix):
         self.matrix = matrix
@@ -93,14 +95,14 @@ matr2 = [[10, 11, 12],
 
 if __name__ == '__main__':
     my_matrix = Matrix(matr1)
-    # my_matrix2 = Matrix(matr2)
-    print(my_matrix)
-    print(my_matrix.size())
-    # print(my_matrix.__add__(my_matrix2))  # сложение
-    # print(my_matrix.__getitem__(1))
-    # print(my_matrix.__mul__(3))  # умножение
-    # print(my_matrix.are_same(my_matrix2))  # сравнение
-    # print(my_matrix.are_same(my_matrix))
+    my_matrix2 = Matrix(matr2)
+#     print(my_matrix)
+#     print(my_matrix.size())
+#     print(my_matrix.__add__(my_matrix2))  # сложение
+#     print(my_matrix.__getitem__(1))
+#     print(my_matrix.__mul__(3))  # умножение
+#     print(my_matrix.are_same(my_matrix2))  # сравнение
+#     print(my_matrix.are_same(my_matrix))
 
 if __name__ == "__main__":
     doctest.testmod(verbose=True)
