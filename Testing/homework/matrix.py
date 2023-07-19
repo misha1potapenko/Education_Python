@@ -1,6 +1,7 @@
 # Взять класс Матрица (написанный ранее)
 # и написать для него по 3-4 теста каждого вида (PyTest, UnitTest, DocTest)
 import doctest
+import unittest
 
 
 class Matrix:
