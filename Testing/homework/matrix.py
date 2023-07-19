@@ -1,7 +1,6 @@
 # Взять класс Матрица (написанный ранее)
 # и написать для него по 3-4 теста каждого вида (PyTest, UnitTest, DocTest)
 import doctest
-import unittest
 
 
 class Matrix:
@@ -97,6 +96,7 @@ matr2 = [[10, 11, 12],
 if __name__ == '__main__':
     my_matrix = Matrix(matr1)
     my_matrix2 = Matrix(matr2)
+    doctest.testmod(verbose=True)
 #     print(my_matrix)
 #     print(my_matrix.size())
 #     print(my_matrix.__add__(my_matrix2))  # сложение
@@ -105,5 +105,4 @@ if __name__ == '__main__':
 #     print(my_matrix.are_same(my_matrix2))  # сравнение
 #     print(my_matrix.are_same(my_matrix))
 
-if __name__ == "__main__":
-    doctest.testmod(verbose=True)
+
