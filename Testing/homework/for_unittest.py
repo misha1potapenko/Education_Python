@@ -23,5 +23,6 @@ class TestCaseName(unittest.TestCase):
     def test_for_size(self):
         self.assertEqual(self.first_matrix.size(), (3, 3), msg='Размер не верен')
 
+
 if __name__ == '__main__':
     unittest.main()
