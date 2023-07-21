@@ -13,8 +13,11 @@ matr2 = [[10, 11, 12],
 
 def test_are_same():
     first_matrix = Matrix(matr1)
-    second_matrix = Matrix(matr2)
     assert first_matrix.are_same(first_matrix), 'Матрицы не равны'
+
+def test_size():
+    first_matrix = Matrix(matr1)
+    assert first_matrix.size() == (3, 3), 'Размер определен не верно'
 
 
 if __name__ == '__main__':
