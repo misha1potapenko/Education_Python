@@ -11,10 +11,10 @@ matr2 = [[10, 11, 12],
          [16, 17, 18]]
 
 
-
-
-def test_sum():
-    assert sum_two_num(2, 3) == 5, 'Математика покинула чат'
+def test_are_same():
+    first_matrix = Matrix(matr1)
+    second_matrix = Matrix(matr2)
+    assert first_matrix.are_same(first_matrix), 'Матрицы не равны'
 
 
 if __name__ == '__main__':
