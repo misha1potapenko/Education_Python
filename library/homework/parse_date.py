@@ -71,12 +71,12 @@ def text_to_date(text: str):
         logger.info(f'{count}-й  {weekday_}  {month_} {year} =  ошибка: {exc}')
 
     count_week = 0
-    for day in range (1, 31 + 1):
+    for day in range(1, 31 + 1):
         rezult = date(year=year, month=month, day=day)
         if rezult.weekday() == weekday:
             count_week += 1
             if count_week == count:
-                logger.info(f'{count}-й {weekday_} {month_} {year} = {rezult} ')
+                logger.info(f'{count}-й(ое) {weekday_} {month_} {year} = {rezult} ')
                 return rezult
 
 
