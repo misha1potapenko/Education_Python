@@ -30,7 +30,6 @@ def text_to_date(text: str):
         month = months[month_[:3]]                       # 5 - число
         weekday = weekdays[weekday_[:3]] - 1             # 2 - число
         count = int(count[0])
-        print(weekday)
     except Exception as exc:
         logger.info(f'{count}-й  {weekday_}  {month_} {year} =  ошибка: {exc}')
 
@@ -47,6 +46,6 @@ def text_to_date(text: str):
 
 
 if __name__ == '__main__':
-    print('1-й вторник мая:', text_to_date('1-й понедельник мая'))
-    print('1-й четверг ноября:', text_to_date('1-й вторник ноября'))
+    print('1-й понедельник мая:', text_to_date('1-й понедельник мая'))
+    print('2-й четверг ноября:', text_to_date('2-й четверг ноября'))
     print('1-я среда мая:', text_to_date('1-я среда мая'))
