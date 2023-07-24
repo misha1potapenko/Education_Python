@@ -50,8 +50,8 @@ def parse_date(text: str):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Парсер для вывода даты из консоли')
-    parser.add_argument('data', metavar='parse_data', type=str, nargs='+', help='Enter data format 1-й понедельник мая'
-                                                                                ' or 3-й понедельник 9 ')
+    parser.add_argument('data', metavar='parse_data', type=str, nargs='+', help='Enter data format "1-й понедельник мая"'
+                                                                                ' or "3-й понедельник 9" ')
     args = parser.parse_args()
     print(parse_date(*args.data))
     # print('1-й понедельник мая:', parse_date('1-й понедельник мая'))
