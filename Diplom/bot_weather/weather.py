@@ -13,8 +13,9 @@ def get_weather(tok):
         r = requests.get(f"http://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={tok}"
                          f"&units=metric&lang=ru")
         data = r.json()
-
         pprint(data)
+        show_city = data['city']['name']
+        print(show_city)
     except Exception as ex:
         print(ex)
         print("Что-то пошло не так")
