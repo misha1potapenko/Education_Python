@@ -1,0 +1,56 @@
+INFO:root:Результат функции my_factorial: 1
+INFO:root:Результат функции my_factorial: 2
+INFO:root:Результат функции my_factorial: 6
+INFO:root:Результат функции my_factorial: 24
+INFO:root:Результат функции my_factorial: 120
+INFO:root:Результат функции my_factorial: 720
+INFO:root:Результат функции my_factorial: 5040
+INFO:root:Результат функции my_factorial: 40320
+DEBUG:root:Запуск функции my_factorial в 1689859594.5167298
+DEBUG:root:Запуск функции my_factorial в 1689859594.5167298
+DEBUG:root:Запуск функции my_factorial в 1689859594.5167298
+DEBUG:root:Запуск функции my_factorial в 1689859594.5167298
+DEBUG:root:Запуск функции my_factorial в 1689859594.5167298
+DEBUG:root:Запуск функции my_factorial в 1689859594.5167298
+DEBUG:root:Запуск функции my_factorial в 1689859594.5167298
+DEBUG:root:Запуск функции my_factorial в 1689859594.5167298
+INFO:root:Результат функции my_factorial: 1
+INFO:root:Результат функции my_factorial: 2
+INFO:root:Результат функции my_factorial: 6
+INFO:root:Результат функции my_factorial: 24
+INFO:root:Результат функции my_factorial: 120
+INFO:root:Результат функции my_factorial: 720
+INFO:root:Результат функции my_factorial: 5040
+INFO:root:Результат функции my_factorial: 40320
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:32:52.687893
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:32:52.687893
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:32:52.687893
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:32:52.687893
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:32:52.687893
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:32:52.687893
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:32:52.687893
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:32:52.687893
+INFO:root:Результат функции my_factorial: 1
+INFO:root:Результат функции my_factorial: 2
+INFO:root:Результат функции my_factorial: 6
+INFO:root:Результат функции my_factorial: 24
+INFO:root:Результат функции my_factorial: 120
+INFO:root:Результат функции my_factorial: 720
+INFO:root:Результат функции my_factorial: 5040
+INFO:root:Результат функции my_factorial: 40320
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:34:18.487331
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:34:18.487331
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:34:18.487331
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:34:18.487331
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:34:18.487331
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:34:18.487331
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:34:18.487331
+DEBUG:root:Запуск функции my_factorial в 2023-07-20 19:34:18.487331
+INFO:root:Результат функции my_factorial: 1 с аргументом (1,)
+INFO:root:Результат функции my_factorial: 2 с аргументом (2,)
+INFO:root:Результат функции my_factorial: 6 с аргументом (3,)
+INFO:root:Результат функции my_factorial: 24 с аргументом (4,)
+INFO:root:Результат функции my_factorial: 120 с аргументом (5,)
+INFO:root:Результат функции my_factorial: 720 с аргументом (6,)
+INFO:root:Результат функции my_factorial: 5040 с аргументом (7,)
+INFO:root:Результат функции my_factorial: 40320 с аргументом (8,)

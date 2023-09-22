@@ -1,0 +1,72 @@
+INFO:root:Запуск функции my_factorial c  аргументом (8,)
+INFO:root:Запуск функции my_factorial c  аргументом (7,)
+INFO:root:Запуск функции my_factorial c  аргументом (6,)
+INFO:root:Запуск функции my_factorial c  аргументом (5,)
+INFO:root:Запуск функции my_factorial c  аргументом (4,)
+INFO:root:Запуск функции my_factorial c  аргументом (3,)
+INFO:root:Запуск функции my_factorial c  аргументом (2,)
+INFO:root:Запуск функции my_factorial c  аргументом (1,)
+INFO:root:Результат функции my_factorial: 1
+INFO:root:Завершение функции my_factorial в 1689873888.5946102
+INFO:root:Результат функции my_factorial: 2
+INFO:root:Завершение функции my_factorial в 1689873888.5966082
+INFO:root:Результат функции my_factorial: 6
+INFO:root:Завершение функции my_factorial в 1689873888.5966082
+INFO:root:Результат функции my_factorial: 24
+INFO:root:Завершение функции my_factorial в 1689873888.5966082
+INFO:root:Результат функции my_factorial: 120
+INFO:root:Завершение функции my_factorial в 1689873888.5966082
+INFO:root:Результат функции my_factorial: 720
+INFO:root:Завершение функции my_factorial в 1689873888.597608
+INFO:root:Результат функции my_factorial: 5040
+INFO:root:Завершение функции my_factorial в 1689873888.597608
+INFO:root:Результат функции my_factorial: 40320
+INFO:root:Завершение функции my_factorial в 1689873888.597608
+INFO:root:Запуск функции my_factorial c  аргументом (8,)
+INFO:root:Запуск функции my_factorial c  аргументом (7,)
+INFO:root:Запуск функции my_factorial c  аргументом (6,)
+INFO:root:Запуск функции my_factorial c  аргументом (5,)
+INFO:root:Запуск функции my_factorial c  аргументом (4,)
+INFO:root:Запуск функции my_factorial c  аргументом (3,)
+INFO:root:Запуск функции my_factorial c  аргументом (2,)
+INFO:root:Запуск функции my_factorial c  аргументом (1,)
+INFO:root:Результат функции my_factorial: 1
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 2
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 6
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 24
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 120
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 720
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 5040
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 40320
+INFO:root:Завершение функции my_factorial
+INFO:root:Запуск функции my_factorial c  аргументом (8,) дата 2023-07-20 20:27:34.583390
+INFO:root:Запуск функции my_factorial c  аргументом (7,) дата 2023-07-20 20:27:34.585389
+INFO:root:Запуск функции my_factorial c  аргументом (6,) дата 2023-07-20 20:27:34.586389
+INFO:root:Запуск функции my_factorial c  аргументом (5,) дата 2023-07-20 20:27:34.586389
+INFO:root:Запуск функции my_factorial c  аргументом (4,) дата 2023-07-20 20:27:34.586389
+INFO:root:Запуск функции my_factorial c  аргументом (3,) дата 2023-07-20 20:27:34.586389
+INFO:root:Запуск функции my_factorial c  аргументом (2,) дата 2023-07-20 20:27:34.587388
+INFO:root:Запуск функции my_factorial c  аргументом (1,) дата 2023-07-20 20:27:34.587388
+INFO:root:Результат функции my_factorial: 1
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 2
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 6
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 24
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 120
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 720
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 5040
+INFO:root:Завершение функции my_factorial
+INFO:root:Результат функции my_factorial: 40320
+INFO:root:Завершение функции my_factorial
